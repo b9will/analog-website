@@ -108,8 +108,8 @@ nav.menu-open { background: transparent; border-color: transparent; }
   overflow: hidden;
   padding-bottom: 0.2em;
   margin-bottom: -0.2em;
-  padding-left: 0.08em;
-  margin-left: -0.08em;
+  padding-left: 0.18em;
+  margin-left: -0.18em;
 }
 /* ── ROTATING WORD ── */
 .hero-rotating-word {

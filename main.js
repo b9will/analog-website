@@ -209,7 +209,7 @@ document.addEventListener('DOMContentLoaded', function() {
           node.textContent.split(/(\s+)/).forEach(function(w){
             if(/^\s+$/.test(w)){frag.appendChild(document.createTextNode(w));}
             else if(w){
-              var outer=document.createElement('span');outer.className='word';outer.style.display='inline-block';outer.style.overflow='hidden';outer.style.paddingTop='0.1em';outer.style.paddingBottom='0.15em';outer.style.marginTop='-0.1em';outer.style.marginBottom='-0.15em';outer.style.paddingLeft='0.08em';outer.style.marginLeft='-0.08em';
+              var outer=document.createElement('span');outer.className='word';outer.style.display='inline-block';outer.style.overflow='hidden';outer.style.paddingTop='0.1em';outer.style.paddingBottom='0.15em';outer.style.marginTop='-0.1em';outer.style.marginBottom='-0.15em';outer.style.paddingLeft='0.18em';outer.style.marginLeft='-0.18em';
               var inner=document.createElement('span');inner.className='word-inner';inner.style.display='inline-block';inner.style.transform='translateY(110%)';inner.textContent=w;
               outer.appendChild(inner);frag.appendChild(outer);
             }
@@ -221,7 +221,7 @@ document.addEventListener('DOMContentLoaded', function() {
           (node.textContent||'').split(/(\s+)/).forEach(function(w){
             if(/^\s+$/.test(w)){clone.appendChild(document.createTextNode(w));}
             else if(w){
-              var outer=document.createElement('span');outer.className='word';outer.style.display='inline-block';outer.style.overflow='hidden';outer.style.paddingTop='0.1em';outer.style.paddingBottom='0.15em';outer.style.marginTop='-0.1em';outer.style.marginBottom='-0.15em';outer.style.paddingLeft='0.08em';outer.style.marginLeft='-0.08em';
+              var outer=document.createElement('span');outer.className='word';outer.style.display='inline-block';outer.style.overflow='hidden';outer.style.paddingTop='0.1em';outer.style.paddingBottom='0.15em';outer.style.marginTop='-0.1em';outer.style.marginBottom='-0.15em';outer.style.paddingLeft='0.18em';outer.style.marginLeft='-0.18em';
               var inner=document.createElement('span');inner.className='word-inner';inner.style.display='inline-block';inner.style.transform='translateY(110%)';inner.textContent=w;
               outer.appendChild(inner);clone.appendChild(outer);
             }
