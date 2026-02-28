@@ -181,7 +181,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var footerEl=document.getElementById('siteFooter');
   ScrollTrigger.create({
     trigger: footerEl,
-    start: 'top 85%',
+    start: 'top 98%',
     once: true,
     onEnter: function() {
       gsap.to(footerEl, { opacity: 1, y: 0, duration: 1, ease: 'power3.out' });
