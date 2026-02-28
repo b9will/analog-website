@@ -11,8 +11,8 @@
   --white:  #ffffff;
   --dark:   #0e0e12;
   --dark-2: #181820;
-  --gold:   #c07d58;
-  --gold-2: #a06040;
+  --gold:   #c9a84c;
+  --gold-2: #c9a84c;
   --pad-h:  64px;
 }
 
@@ -61,10 +61,10 @@ nav.scrolled { background: rgba(249,249,251,0.96); backdrop-filter: blur(20px); 
 nav.scrolled .nav-inner { padding-top: 16px; padding-bottom: 16px; }
 nav.menu-open { background: transparent; border-color: transparent; }
 .nav-logo { text-decoration: none; display: flex; align-items: center; position: relative; z-index: 301; cursor: none; }
-.nav-logo .wm-dark { display: block; height: 32px; width: auto; }
-.nav-logo .wm-light { display: none; height: 32px; width: auto; }
-.menu-open .nav-logo .wm-dark { display: none; }
-.menu-open .nav-logo .wm-light { display: block; }
+.nav-logo .logo-mono { display: block; height: 32px; width: auto; opacity: 1; transition: opacity 0.3s ease; }
+.nav-logo .logo-wordmark { position: absolute; left: 0; top: 50%; transform: translateY(-50%); height: 32px; width: auto; clip-path: inset(0 100% 0 0); transition: clip-path 0.4s cubic-bezier(0.77,0,0.18,1); }
+.menu-open .nav-logo .logo-mono { opacity: 0; transition: opacity 0.15s ease; }
+.menu-open .nav-logo .logo-wordmark { clip-path: inset(0 0 0 0); transition: clip-path 0.7s cubic-bezier(0.77,0,0.18,1) 0.15s; }
 .nav-burger { position: relative; z-index: 301; width: 36px; height: 36px; background: none; border: none; cursor: none; display: flex; flex-direction: column; justify-content: center; align-items: flex-end; gap: 5px; }
 .burger-line { display: block; height: 1px; background: var(--ink); transition: transform 0.4s cubic-bezier(0.16,1,0.3,1), opacity 0.3s, width 0.4s cubic-bezier(0.16,1,0.3,1); }
 .burger-line:nth-child(1) { width: 24px; }
@@ -191,7 +191,11 @@ nav.menu-open { background: transparent; border-color: transparent; }
 .logo-slot:nth-child(4n) { border-right: none; }
 .logo-slot:nth-last-child(-n+4) { border-bottom: none; }
 .logo-slot:hover { background: rgba(255,255,255,0.04); }
-.client-logo-img { height: 28px; width: auto; max-width: 120px; object-fit: contain; opacity: 0.45; filter: brightness(0) invert(1); transition: opacity 0.25s; display: block; }
+.client-logo-img { height: 16px; width: auto; max-width: 120px; object-fit: contain; opacity: 0.45; filter: brightness(0) invert(1); transition: opacity 0.25s; display: block; }
+/* larger variation */
+.client-logo-img--large {
+  height: 24px;
+}
 .logo-slot:hover .client-logo-img { opacity: 0.85; }
 .who-right { padding-left: 80px; display: flex; flex-direction: column; gap: 28px; }
 .who-body { font-size: 16px; line-height: 1.85; font-weight: 400; color: var(--ink-2); }

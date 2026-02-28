@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
   setTimeout(finishLoader,4200);
 
   /* ── ROTATING WORD ─────────────────── */
-  var rotWords=['Friction.','Headaches.','Overages.','Paperwork.','Variability.','Questions.'];
+  var rotWords=['Friction.','Headaches.','Overruns.','Paperwork.','Unpredictability.','Questions.'];
   var rotIdx=0, rotRunning=false;
   var rotEl=document.getElementById('rotatingWord');
   function getH(){ return rotEl.offsetHeight||80; }
