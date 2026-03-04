@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
   setTimeout(finishLoader,4200);
 
   /* ── ROTATING WORD ─────────────────── */
-  var rotWords=['Friction.','Headaches.','Questions.','Overages.','Paperwork.','Variability.'];
+  var rotWords=['Friction.','Headaches.','Questions.','Overruns.','Paperwork.','Unpredictability.'];
   var rotIdx=0, rotRunning=false;
   var rotEl=document.getElementById('rotatingWord');
   function getH(){ return rotEl.offsetHeight||80; }
@@ -136,6 +136,13 @@ document.addEventListener('DOMContentLoaded', function() {
     menuOpen=false; navEl.classList.remove('menu-open'); overlay.classList.remove('open'); document.body.style.overflow='';
   };
 
+  /* ── NAV LOGO HOVER (expand to wordmark, top-left anchor, fade wipe) ── */
+  var navLogo=document.querySelector('.nav-logo');
+  if(navLogo){
+    navLogo.addEventListener('mouseenter',function(){ if(!menuOpen) navEl.classList.add('logo-hover'); });
+    navLogo.addEventListener('mouseleave',function(){ navEl.classList.remove('logo-hover'); });
+  }
+
   /* ── CURSOR ─────────────────────────── */
   if(!isMobile){
     var curEl=document.getElementById('cur'), dotEl=document.getElementById('curDot');
@@ -181,7 +188,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var footerEl=document.getElementById('siteFooter');
   ScrollTrigger.create({
     trigger: footerEl,
-    start: 'top 85%',
+    start: 'top 98%',
     once: true,
     onEnter: function() {
       gsap.to(footerEl, { opacity: 1, y: 0, duration: 1, ease: 'power3.out' });
@@ -209,7 +216,7 @@ document.addEventListener('DOMContentLoaded', function() {
           node.textContent.split(/(\s+)/).forEach(function(w){
             if(/^\s+$/.test(w)){frag.appendChild(document.createTextNode(w));}
             else if(w){
-              var outer=document.createElement('span');outer.className='word';outer.style.display='inline-block';outer.style.overflow='hidden';
+              var outer=document.createElement('span');outer.className='word';outer.style.display='inline-block';outer.style.overflow='hidden';outer.style.paddingTop='0.1em';outer.style.paddingBottom='0.15em';outer.style.marginTop='-0.1em';outer.style.marginBottom='-0.15em';outer.style.paddingLeft='0.18em';outer.style.marginLeft='-0.18em';
               var inner=document.createElement('span');inner.className='word-inner';inner.style.display='inline-block';inner.style.transform='translateY(110%)';inner.textContent=w;
               outer.appendChild(inner);frag.appendChild(outer);
             }
@@ -221,7 +228,7 @@ document.addEventListener('DOMContentLoaded', function() {
           (node.textContent||'').split(/(\s+)/).forEach(function(w){
             if(/^\s+$/.test(w)){clone.appendChild(document.createTextNode(w));}
             else if(w){
-              var outer=document.createElement('span');outer.className='word';outer.style.display='inline-block';outer.style.overflow='hidden';
+              var outer=document.createElement('span');outer.className='word';outer.style.display='inline-block';outer.style.overflow='hidden';outer.style.paddingTop='0.1em';outer.style.paddingBottom='0.15em';outer.style.marginTop='-0.1em';outer.style.marginBottom='-0.15em';outer.style.paddingLeft='0.18em';outer.style.marginLeft='-0.18em';
               var inner=document.createElement('span');inner.className='word-inner';inner.style.display='inline-block';inner.style.transform='translateY(110%)';inner.textContent=w;
               outer.appendChild(inner);clone.appendChild(outer);
             }
