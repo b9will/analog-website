@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.classList.add('page-ready');
         loader.style.display='none';
         playHeroEntrance();
-      },200);
+      }, 1100);
     },380);
   }
   setTimeout(finishLoader,4200);
