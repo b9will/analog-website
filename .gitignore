@@ -3,3 +3,10 @@ index_v2.html
 index_v3.html
 index_v4.html
 .claude
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+.env*
+!.env.example
