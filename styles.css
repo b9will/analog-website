@@ -193,7 +193,7 @@ nav.menu-open { background: transparent; border-color: transparent; }
 .who-logos-label { font-size: 9px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--ink-4); margin-bottom: 24px; display: flex; align-items: center; gap: 12px; }
 .who-logos-label::before { content: ''; display: block; width: 14px; height: 1px; background: var(--gold); }
 .logo-row { display: grid; grid-template-columns: repeat(2, 1fr); gap: 48px 64px; background: transparent; border: none; padding: 48px 32px; align-items: start; }
-.logo-slot { border: none; padding: 24px 16px; display: flex; align-items: flex-start; justify-content: flex-start; min-height: 64px; transition: background 0.25s; background: transparent; }
+.logo-slot { border: none; padding: 24px 16px; display: flex; align-items: center; justify-content: center; min-height: 64px; transition: background 0.25s; background: transparent; }
 .logo-slot:nth-child(4n) { border-right: none; }
 .logo-slot:nth-last-child(-n+4) { border-bottom: none; }
 .logo-slot:hover { background: transparent; }
